@@ -10,6 +10,11 @@ h2 {
     padding: 10px;
 }
 
+h3 {
+    margin: 5px;
+    background: linear-gradient(0.25turn, lightcyan, skyblue);
+}
+
 div#zentai {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -22,9 +27,7 @@ div#zentai > div {
 	background-color: lightcyan;
 }
 
-ul {
+dl {
     padding: 10px;
-    background-color: skyblue;
-    border-block: solid;
-    writing-mode: horizontal-tb;  
+    background-color: lightgray;
 }
