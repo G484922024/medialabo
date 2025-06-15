@@ -8,6 +8,7 @@ h2 {
     border-block-start: groove;
     writing-mode: horizontal-tb;   
     padding: 10px;
+    text-shadow: yellow 1px 0 10px;
 }
 
 h3 {
