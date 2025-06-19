@@ -35,7 +35,7 @@ dl {
 
 div#tantai {
     display: grid;
-    grid-template-columns: 0.5fr;
+    grid-template-columns: 700px;
     grid-auto-rows: 300px 300px;
     grid-gap: 20px;
 }
