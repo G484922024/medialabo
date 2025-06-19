@@ -32,3 +32,15 @@ dl {
     padding: 10px;
     background-color: lightgray;
 }
+
+div#tantai {
+    display: grid;
+    grid-template-columns: 0.5fr;
+    grid-auto-rows: 300px 300px;
+    grid-gap: 20px;
+}
+
+div#tantai > div {
+    margin-left: 10px;
+    background-color: lightcyan;
+}
