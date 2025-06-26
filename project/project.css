@@ -13,8 +13,26 @@ div.long {
     margin-left: 5px;
 }
 
+div.short  {
+    flex: 2;                
+
+    background-color: lightgoldenrodyellow;
+    margin-left: 5px;
+}
+
 h1 {
     color:  rgb(26, 3, 63);
     text-shadow: rgb(207, 81, 59) 1px 0 10px;
     padding: 10px;
+}
+
+input {
+  margin: 0.4rem;
+}
+
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
 }

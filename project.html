@@ -8,7 +8,31 @@
     </head>
     <body>
         <h1>世界の天気 (検索結果1件:北京)</h1>
+        <fieldset>
+            <legend>項目を選択してください</legend>
+            <div>
+                <input type="checkbox" name="cl" id="ido" value="ido"/>
+                <label for="ido">緯度</label>
+                <input type="checkbox" name="cl" id="keido" value="keido"/>
+                <label for="keido">経度</label>
+                <input type="checkbox" name="cl" id="tenki" value="tenki"/>
+                <label for="tenki">天気</label>
+                <input type="checkbox" name="cl" id="saitei" value="saitei"/>
+                <label for="saitei">最低気温</label>
+            </div>
+            <div>
+                <input type="checkbox" name="cl" id="situdo" value="situdo"/>
+                <label for="situdo">湿度</label>
+                <input type="checkbox" name="cl" id="fuusoku" value="fuusoku"/>
+                <label for="fuusoku">風速</label>
+                <input type="checkbox" name="cl" id="fuukou" value="fuukou"/>
+                <label for="fuukou">風向</label>
+                <input type="checkbox" name="cl" id="saikou" value="saikou"/>
+                <label for="saikou">最高気温</label>
+            </div>
+        </fieldset>
         <div class="zentai">
+            <div class="short"><h2>都市名</h2></div>
             <div class="long"><h2>経度</h2></div>
             <div class="long"><h2>緯度</h2></div>
             <div class="long"><h2>天気</h2></div>
@@ -17,10 +41,10 @@
             <div class="long"><h2>湿度</h2></div>
             <div class="long"><h2>風速</h2></div>
             <div class="long"><h2>風向</h2></div>
-            <div class="long"><h2>都市名</h2></div>
         </div>
 
         <div class="zentai">
+            <div class="short"><h2>北京市</h2></div>
             <div class="long"><h2>116.3972</h2></div>
             <div class="long"><h2>39.9075</h2></div>
             <div class="long"><h2>曇りがち</h2></div>
@@ -29,7 +53,6 @@
             <div class="long"><h2>14%</h2></div>
             <div class="long"><h2>2.65m/s</h2></div>
             <div class="long"><h2>197°(南南西)</h2></div>
-            <div class="long"><h2>北京市</h2></div>
         </div>
         <img src="project/北京.jpg" alt="北京の写真">
     </body>
