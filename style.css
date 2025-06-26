@@ -44,3 +44,11 @@ div#tantai > div {
     margin-left: 10px;
     background-color: lightcyan;
 }
+
+p#aaa {
+    padding: 10px;
+}
+
+fieldset {
+    margin: 10px;
+}
