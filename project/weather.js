@@ -1,10 +1,11 @@
 
 // 課題3-2 のプログラムはこの関数の中に記述すること
 function print(data) {
-  console.log('軽度: ' + data.coord.lon );
+  console.log('経度: ' + data.coord.lon );
   console.log('緯度:' + data.coord.lat );
   console.log('天気: ' + data.weather[0].description );
-  console.log('気温: ' + data.main.temp );
+  console.log('最低気温: ' + data.main.temp_min );
+  console.log('最高気温: '+data.main.temp_max);
   console.log('湿度: ' + data.main.humidity + '%');
   console.log('風速: ' + data.wind.speed + 'm/s');
   console.log('風向: ' + data.wind.deg + '°');
@@ -15,7 +16,43 @@ function print(data) {
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
-
+  let a = document.querySelector('div#result');
+  let i = document.createElement('div');
+  i.classList.add('short');
+  a.insertAdjacentElement('beforeend', i);
+  i.textContent = '都市名: ' + data.name;
+  let b = document.createElement('div');
+  b.classList.add('long');
+  a.insertAdjacentElement('beforeend', b);
+  b.textContent = '経度: ' + data.coord.lon;
+  let c = document.createElement('div');
+  c.classList.add('long');
+  a.insertAdjacentElement('beforeend', c);
+  c.textContent = '緯度: ' + data.coord.lat;
+  let d = document.createElement('div');
+  d.classList.add('long');
+  a.insertAdjacentElement('beforeend', d);
+  d.textContent = '天気: ' + data.weather[0].description;
+  let e = document.createElement('div');
+  e.classList.add('long');
+  a.insertAdjacentElement('beforeend', e);
+  e.textContent = '最低気温: ' + data.main.temp_min;
+  let E = document.createElement('div');
+  E.classList.add('long');
+  a.insertAdjacentElement('beforeend', E);
+  E.textContent = '最高気温: ' + data.main.temp_max;
+  let f = document.createElement('div');
+  f.classList.add('long');
+  a.insertAdjacentElement('beforeend', f);
+  f.textContent = '湿度: ' + data.main.humidity + '%';
+  let g = document.createElement('div');
+  g.classList.add('long');
+  a.insertAdjacentElement('beforeend', g);
+  g.textContent = '風速: ' + data.wind.speed + 'm/s';
+  let h = document.createElement('div');
+  h.classList.add('long');
+  a.insertAdjacentElement('beforeend', h);
+  h.textContent = '風向: ' + data.wind.deg + '°';
 }
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述

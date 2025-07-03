@@ -6,6 +6,14 @@ div.zentai {
     padding: 5px 5px 5px 0;
 }
 
+div#result {
+    display: flex;
+    flex-direction: row;
+
+    border: 1px solid gray;
+    padding: 5px 5px 5px 0;
+}
+
 div.long {
     flex: 2;                
 
