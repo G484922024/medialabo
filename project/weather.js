@@ -16,7 +16,10 @@ function print(data) {
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
-  let a = document.querySelector('div#result');
+  let A = document.querySelector('div#result');
+  let a = document.createElement('div');
+  a.classList.add('zentai');
+  A.insertAdjacentElement('afterend', a);
   let i = document.createElement('div');
   i.classList.add('short');
   a.insertAdjacentElement('beforeend', i);
