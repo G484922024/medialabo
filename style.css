@@ -23,14 +23,28 @@ div#zentai {
     grid-gap: 20px;
 }
 
-div#zentai > div {
+
+
+div.last {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 300px 300px;
+    grid-gap: 20px;
+}
+
+div#zentai > div.box {
 	margin-left: 10px;
 	background-color: lightcyan;
 }
 
 dl {
     padding: 10px;
-    background-color: lightgray;
+    background-color: rgb(225, 235, 235);
+    width: 900px;
+}
+
+dt {
+    font-weight: bold;
 }
 
 div#tantai {
@@ -51,4 +65,15 @@ p#aaa {
 
 fieldset {
     margin: 10px;
+}
+
+p#project {
+    margin: 10px;
+    margin-right: 100px;
+}
+
+p#link {
+    padding: 10px;
+    position: static;
+    font-weight: bold;
 }
