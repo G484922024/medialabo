@@ -1,8 +1,8 @@
 
 // 課題3-2 のプログラムはこの関数の中に記述すること
 function print(data) {
-  console.log('経度: ' + data.coord.lon );
-  console.log('緯度: ' + data.coord.lat );
+  console.log('経度: ' + data.coord.lon +'(東経)');
+  console.log('緯度: ' + data.coord.lat +'(北緯)');
   console.log('天気: ' + data.weather[0].description );
   console.log('最低気温: ' + data.main.temp_min + '℃');
   console.log('最高気温: '+data.main.temp_max + '℃');
@@ -44,14 +44,14 @@ function printDom(data) {
     let b = document.createElement('div');
     b.classList.add('long');
     a.insertAdjacentElement('beforeend', b);
-    b.textContent = '緯度: ' + data.coord.lat;
+    b.textContent = '緯度: ' + data.coord.lat +'(北緯)';
   }
 
   if(check2.checked) {
     let c = document.createElement('div');
     c.classList.add('long');
     a.insertAdjacentElement('beforeend', c);
-    c.textContent = '経度: ' + data.coord.lon;;
+    c.textContent = '経度: ' + data.coord.lon +'(東経)';
   }
 
   if(check3.checked) {
