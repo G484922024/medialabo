@@ -44,14 +44,14 @@ function printDom(data) {
     let b = document.createElement('div');
     b.classList.add('long');
     a.insertAdjacentElement('beforeend', b);
-    b.textContent = '経度: ' + data.coord.lon;
+    b.textContent = '緯度: ' + data.coord.lat;
   }
 
   if(check2.checked) {
     let c = document.createElement('div');
     c.classList.add('long');
     a.insertAdjacentElement('beforeend', c);
-    c.textContent = '緯度: ' + data.coord.lat;
+    c.textContent = '経度: ' + data.coord.lon;;
   }
 
   if(check3.checked) {
