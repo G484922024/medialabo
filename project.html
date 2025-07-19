@@ -4,12 +4,13 @@
         <meta charset="utf-8">
         <title>プロジェクト課題</title>
         <link rel="stylesheet" href="project/project.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
         <script src="project/weather.js" defer></script>
     </head>
     <body>
         <h1>世界の天気 (検索結果1件:北京)</h1>
         <fieldset>
-            <legend>項目を選択してください</legend>
+            <legend>表示したい項目を選択してください</legend>
             <div>
                 <input type="checkbox" name="cl" id="ido" value="ido"/>
                 <label for="ido">緯度</label>
@@ -30,9 +31,12 @@
                 <input type="checkbox" name="cl" id="saikou" value="saikou"/>
                 <label for="saikou">最高気温</label>
             </div>
+            <div>
+                <button id="sendRequest">表示</button>
+            </div>
         </fieldset>
         </div>
-        <img src="project/北京.jpg" alt="北京の写真">
-        <div id="result"></div>
+        <h2><div id="result"><div class="migawari"></div><div id="migawari"></div></div></h2>
+        <img src="project/北京.jpg" alt="北京の写真"></img>
     </body>
 </html>

@@ -1,9 +1,12 @@
 div.zentai {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
-    border: 1px solid gray;
-    padding: 5px 5px 5px 0;
+    border: 2px solid gray;
+    padding: 3px;
+    width: 400px;
+
+    background-image: url("project/北京.jpg");
 }
 
 
@@ -11,20 +14,25 @@ div.zentai {
 div.long {
     flex: 2;                
 
-    background-color: cyan;
-    margin-left: 5px;
+    background-color: rgb(196, 255, 255);
+    margin: 2px;
+    padding-left: 5px;
+    color: darkslategray;
+
 }
 
 div.short  {
-    flex: 2;                
+    flex: 1.2;                
 
-    background-color: lightgoldenrodyellow;
-    margin-left: 5px;
+    background-color:  cyan;
+    margin: 2px;
+    padding-left: 5px;
+    color: darkslategray;
 }
 
 h1 {
     color:  rgb(26, 3, 63);
-    text-shadow: rgb(207, 81, 59) 1px 0 10px;
+    text-shadow: rgb(213, 218, 67) 1px 0 10px;
     padding: 10px;
 }
 
@@ -42,3 +50,17 @@ label {
 fieldset {
     width: 375px;
 }
+
+img {
+    width: 800px;
+    position: absolute;
+    top: 100px;
+    left: 450px;   
+}
+
+button {
+    width: 60px;
+    font-weight: bold;
+    background-color: lightpink;
+}
+
