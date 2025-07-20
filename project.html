@@ -9,6 +9,26 @@
     </head>
     <body>
         <h1>世界の天気 (検索結果1件:北京)</h1>
+
+        <p id="Toshi">
+            検索したい都市名: 
+            <select name="toshi" id="toshi">
+                <option value="">--都市名--</option>
+                <option value="Cairo" id="Cairo">カイロ(エジプト)</option>
+                <option value="Moscow" id="Moscow">モスクワ(ロシア)</option>
+                <option value="Johannesburg" id="Johannesburg">ヨハネスブルグ(南アフリカ)</option>
+                <option value="Beijing" id="Beijing">北京(中国)</option>
+                <option value="Tokyo" id="Tokyo">東京(日本)</option>
+                <option value="Singapore" id="Singapore">シンガポール</option>
+                <option value="Sydney" id="Sydney">シドニー(オーストラリア)</option>
+                <option value="London" id="London">ロンドン(イギリス)</option> 
+                <option value="Paris" id="Paris">パリ(フランス)</option>
+                <option value="Rio" id="Rio">リオデジャネイロ(ブラジル)</option>
+                <option value="NewYork" id="NewYork">ニューヨーク(アメリカ)</option>
+                <option value="Los" id="Los">ロサンゼルス(アメリカ)</option>
+            </select>
+        </p>
+
         <fieldset>
             <legend>表示したい項目を選択してください</legend>
             <div>
@@ -37,6 +57,6 @@
         </fieldset>
         </div>
         <h2><div id="result"><div class="migawari"></div><div id="migawari"></div></div></h2>
-        <img src="project/北京.jpg" alt="北京の写真"></img>
+        <img src="project/世界地図.jpg" alt="世界地図" id="cityimage"></img>
     </body>
 </html>

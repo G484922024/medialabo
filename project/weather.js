@@ -44,14 +44,14 @@ function printDom(data) {
     let b = document.createElement('div');
     b.classList.add('long');
     a.insertAdjacentElement('beforeend', b);
-    b.textContent = '緯度: ' + data.coord.lat +'(北緯)';
+    b.textContent = '緯度: ' + data.coord.lat ;
   }
 
   if(check2.checked) {
     let c = document.createElement('div');
     c.classList.add('long');
     a.insertAdjacentElement('beforeend', c);
-    c.textContent = '経度: ' + data.coord.lon +'(東経)';
+    c.textContent = '経度: ' + data.coord.lon ;
   }
 
   if(check3.checked) {
@@ -101,17 +101,85 @@ function printDom(data) {
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
 let se = document.querySelector('#sendRequest');
 se.addEventListener('click', sendRequest);
-
-
+let Toshi = document.querySelector('#toshi');
+let img = document.querySelector("#cityimage");
 
 // 課題6-1 のイベントハンドラ sendRequest() の定義
 function sendRequest() {
-  let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/1816670.json';
 
-  axios.get(url)
+  let selected = Toshi.value;
+  let url;
+  if(selected === "Cairo") {
+    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/360630.json';
+    img.src = 'project/カイロ.jpg';
+    img.alt = "カイロの写真";
+  }
+  else if(selected === "Moscow") {
+    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/524901.json';
+    img.src = 'project/モスクワ.jpg';
+    img.alt = "モスクワの写真";
+  }
+  else if(selected === "Johannesburg") {
+    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/993800.json';
+    img.src = 'project/ヨハネスブルグ.jpg';
+    img.alt = "ヨハネスブルグの写真";
+  }
+  else if(selected === "Beijing") {
+    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/1816670.json';
+    img.src = 'project/北京.jpg';
+    img.alt = "北京の写真";
+  }
+  else if(selected === "Tokyo") {
+    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/1850147.json';
+    img.src = 'project/東京.jpg';
+    img.alt = "東京の写真";
+  }
+  else if(selected === "Singapore") {
+    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/1880252.json';
+    img.src = 'project/シンガポール.jpg';
+    img.alt = "シンガポールの写真";
+  }
+  else if(selected === "Sydney") {
+    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/2147714.json';
+    img.src = 'project/シドニー.jpg';
+    img.alt = "シドニーの写真";
+  }
+  else if(selected === "London") {
+    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/2643743.json';
+    img.src = 'project/ロンドン.jpg';
+    img.alt = "ロンドンの写真";
+  }
+  else if(selected === "Paris") {
+    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/2968815.json';
+    img.src = 'project/パリ.jpg';
+    img.alt = "パリの写真";
+  }
+  else if(selected === "Rio") {
+    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/3451189.json';
+    img.src = 'project/リオデジャネイロ.jpg';
+    img.alt = "リオデジャネイロの写真";
+  }
+  else if(selected === "NewYork") {
+    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/5128581.json';
+    img.src = 'project/ニューヨーク.jpg';
+    img.alt = "ニューヨークの写真";
+  }
+  else if(selected === "Los") {
+    url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/5368361.json';
+    img.src = 'project/ロサンゼルス.jpg';
+    img.alt = "ロサンゼルスの写真";
+  }
+
+
+  if(url) {
+    axios.get(url)
       .then(showResult)
       .catch(showError)
       .then(finish)
+  }
+  else {
+    console.log('都市が選ばれていません');
+  }
 }
 
 // 課題6-1: 通信が成功した時の処理は以下に記述

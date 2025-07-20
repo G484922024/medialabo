@@ -52,7 +52,7 @@ fieldset {
 }
 
 img {
-    width: 800px;
+    width: 725px;
     position: absolute;
     top: 100px;
     left: 450px;   
@@ -62,5 +62,9 @@ button {
     width: 60px;
     font-weight: bold;
     background-color: lightpink;
+}
+
+p#Toshi {
+    padding: 10px;
 }
 
